@@ -1,8 +1,14 @@
 //Define the route handlers
 const express = require("express");
+const cors = require("cors");
 const studentData = require("./studentData.json");
 //create an instance of express app
 const app = express();
+
+//Set up Middlwear
+//Function that will work with req, res before
+//the final route handler funtion
+app.use(cors());
 
 //Define our routes
 //Healthcheck route
